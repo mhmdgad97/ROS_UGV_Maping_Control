@@ -1,0 +1,26 @@
+  int main(int argc, char** argv)
+    {
+    //Create Point Clouds
+    //PointCloud<PointXYZ>::Ptr sourceCloud(new PointCloud<PointXYZ>);
+
+    vector < PointCloud<PointXYZ>::Ptr, Eigen::aligned_allocator <PointCloud <PointXYZ>::Ptr > > sourceClouds;
+
+    //save PointClouds to array
+    for (int i = 1; i < (argc - 1); i++)
+    {
+        PointCloud<PointXYZ>::Ptr sourceCloud(new PointCloud<PointXYZ>);
+        if (io::loadPCDFile<PointXYZ>(argv[i], *sourceCloud) != 0)
+        {
+            return -1;
+        }
+        cout << "Loaded file " << argv[i] << " (" << sourceCloud->size() << " points)" << endl;
+        sourceClouds.push_back(sourceCloud);
+        cout << "Point Cloud " << i-1 << "has got " << sourceClouds[i-1]->size() << " Points" << endl;
+       // sourceCloud->clear();
+    }
+
+    for (int i = 0; i < sourceClouds.size() - 1; i++)
+    {
+        cout << "Point Cloud " << i << "has got " << sourceClouds[i]->size() << " Points" << endl;
+    }
+    }

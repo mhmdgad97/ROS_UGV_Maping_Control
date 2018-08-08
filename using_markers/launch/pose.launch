@@ -1,0 +1,11 @@
+<launch>
+
+
+  <node pkg="using_markers" type="posNclou_pubsub" name="poseNclouPubSub"/>
+
+  <node pkg="using_markers" type="basic_shapes" name="rvizmarkerpub"/>
+
+
+
+</launch>
+
