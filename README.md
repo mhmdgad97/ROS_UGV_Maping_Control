@@ -30,7 +30,7 @@ you only need to do this once for every Arduino port
 this creates ros_lib, which must be copied into the Arduino build environment to enable Arduino programs to interact with ROS.
 
 
-replace <sketchbook> with the directory where the Linux Arduino environment saves your sketches (usually at home)
+replace (sketchbook) with the directory where the Linux Arduino environment saves your sketches (usually at home)
 ```
 cd <sketchbook>/libraries
 rm -rf ros_lib
