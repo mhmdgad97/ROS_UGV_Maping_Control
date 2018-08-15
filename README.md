@@ -23,7 +23,7 @@ or use this command, but replace (0) after ACM with your Arduino serial port num
 ```
 sudo chmod 666 /dev/ttyACM0
 ```
-you only need to do this once fore every Arduino port
+you only need to do this once for every Arduino port
 
 ### Install ros_lib into the Arduino Environment
 
