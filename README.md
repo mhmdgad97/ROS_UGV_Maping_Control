@@ -75,4 +75,6 @@ See also the list of [contributors](https://github.com/mhmdgad97/ROS_UGV_Maping_
 
 See the [LICENSE.md](LICENSE.md) file for details
 
+## References
+installing ros_lib [wiki.ros](http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup)
 ## Acknowledgments

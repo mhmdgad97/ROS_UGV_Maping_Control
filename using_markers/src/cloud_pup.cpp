@@ -1,3 +1,10 @@
+/********************************************************************************************************
+*                                        cloud_pup.cpp                                                  *
+*********************************************************************************************************
+*this is just a demo for publishing a point cloud so it can be viewd on rviz                            *
+*to do: make this node like basic_shapes.cpp node that supscribe to topic contains mines location then  *
+*publish point cloud with those locations in realtime                                                   *
+********************************************************************************************************/
 #include <ros/ros.h>
 #include <pcl_ros/point_cloud.h>
 #include <pcl/point_types.h>
@@ -11,7 +18,7 @@ int main(int argc, char** argv)
   ros::NodeHandle nh;
   ros::Publisher pub = nh.advertise<PointCloud> ("points2", 100);
   ros::Publisher pubDn = nh.advertise<PointCloud> ("points22", 100);
- int i;
+ int i; //just counter
   PointCloud::Ptr msg (new PointCloud);
   PointCloud::Ptr msgDn (new PointCloud);
   msg->header.frame_id = "/my_frame";

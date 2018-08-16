@@ -1,6 +1,15 @@
+/********************************************************************************************************
+*                                        basic_shapes.cpp                                               *
+*********************************************************************************************************
+*this node subscribes to (RobPos) topic that contains message of type Pose messages,(contains           *
+*current robot posetion x,y,and orinetation),                                                           *
+*                                                                                                       *
+*then this node publish on topic (visualization_marker) message of type marker that can be viwed on Rviz*
+********************************************************************************************************/
 #include <ros/ros.h>
 #include <visualization_msgs/Marker.h>
 #include <std_msgs/Int32.h>
+
 
 float px=3.0f;
 float py=1.0f;
@@ -27,7 +36,7 @@ int main( int argc, char** argv )
   ros::Publisher marker_pub = n.advertise<visualization_msgs::Marker>("visualization_marker", 1);
   ros::Subscriber sub = n.subscribe("RobPos", 100, posCallback);
 
-  // Set our initial shape type to be a ARROW
+  // Set our initial shape type to be a ARROW, or CUBE .. etc
   uint32_t shape = visualization_msgs::Marker::CUBE;
 
 
@@ -43,9 +52,10 @@ int main( int argc, char** argv )
     marker.id = 0;
     // Set the marker type.
     marker.type = shape;
-    // Set the marker action.  Options are ADD, DELETE, and new in ROS Indigo: 3 (DELETEALL)
+    // Set the marker action.  Options are ADD, DELETE
     marker.action = visualization_msgs::Marker::ADD;
     // Set the pose of the marker.  This is a full 6DOF pose relative to the frame/time specified in the header
+    // I coulden't figure out how to calculate the prientaion so it will point to the ropot direction.
     marker.pose.position.x = px;
     marker.pose.position.y = py;
     marker.pose.position.z = 0;

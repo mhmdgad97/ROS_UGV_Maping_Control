@@ -1,3 +1,10 @@
+/********************************************************************************************************
+*                                        basic_shapes.cpp                                               *
+*********************************************************************************************************
+*this node subscribes to (joy) topic from the TeleopeTurtle node (one of ROS example packages)          *
+*then publish it as the standerd Twist message on topic (/cmd_vel),                                     * 
+(this is the same topic of the teleope twist keboard)                                                   *
+********************************************************************************************************/
 #include <ros/ros.h>
 #include <geometry_msgs/Twist.h>
 #include <sensor_msgs/Joy.h>
