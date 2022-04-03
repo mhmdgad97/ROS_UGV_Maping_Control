@@ -41,29 +41,6 @@ After restarting your IDE, you should see ros_lib listed under examples:
 ## Running the tests
 
 to be written
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Contributing
-
-Please read [CONTRIBUTING.md]() for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/mhmdgad97/ROS_UGV_Maping_Control/tags). 
 
 ## Authors
 
